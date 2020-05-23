@@ -1,0 +1,34 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "Chunk_Data",
+"language": "GDScript",
+"path": "res://engine/chunk/chunk_resource.gd"
+} ]
+_global_script_class_icons={
+"Chunk_Data": ""
+}
+
+[application]
+
+config/name="factory_Game"
+run/main_scene="res://map/map.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+ChunkLoader="*res://engine/chunk/chunk_loader.gd"
+hlp="*res://engine/helper.gd"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
